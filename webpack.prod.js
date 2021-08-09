@@ -23,13 +23,8 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/,
-        exclude: /styles.css$/,
-        use: ["style-loader", "css-loader"],
-      },
-      {
-        test: /styles.css$/,
-        use: [MiniCssExtract.loader, "css-loader"],
+        test: /\.scss$/,
+        use: [MiniCssExtract.loader, "css-loader", "sass-loader"],
       },
       {
         test: /\.(png|jpe?g|gif)$/,
